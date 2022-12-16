@@ -38,6 +38,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
         <module>NaiveTesting</module>
         <module>Common</module>
         <module>NullabilityTesting</module>
+        <module>ReformedTesting</module>
     </modules>
     <packaging>pom</packaging>
 
