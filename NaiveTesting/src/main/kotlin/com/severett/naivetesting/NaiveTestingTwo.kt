@@ -4,13 +4,16 @@ import com.severett.common.model.Foo
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+import kotlin.time.ExperimentalTime
+import kotlin.time.TimeSource
+import kotlin.time.measureTime
 
-private const val MS_DIVISOR = 1_000_000
-
+@OptIn(ExperimentalTime::class)
 fun main() {
     val foo = Foo("FUZZ", listOf("BIZZ", "BUZZ"), 20u)
-    // Kotlin
-    val kotlinStart = System.nanoTime()
-    Json.decodeFromString<Foo>(Json.encodeToString(foo))
-    println("KOTLIN: ${(System.nanoTime() - kotlinStart) / MS_DIVISOR}ms")
+    val timeSource = TimeSource.Monotonic
+    val elapsedTime = timeSource.measureTime {
+        Json.decodeFromString<Foo>(Json.encodeToString(foo))
+    }
+    println("KOTLIN: $elapsedTime")
 }
