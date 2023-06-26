@@ -1,3 +1,3 @@
-GSON Deserialize,GSON Serialize,Jackson Deserialize,Jackson Serialize,JSON-B Deserialize,JSON-B Serialize,Kotlin Deserialize,Kotlin Serialize
-5010.692,855.116,2571.782,2480.189,1843.265,2486.823,1966.324,1892.098
-73.776,16.404,42.665,39.715,59.114,72.543,30.707,37.239
+GSON Deserialize,Jackson Deserialize,JSON-B Deserialize,Kotlin Deserialize,GSON Serialize,Jackson Serialize,JSON-B Serialize,Kotlin Serialize
+5010.692,2571.782,1843.265,1966.324,855.116,2480.189,2486.823,1892.098
+73.776,42.665,59.114,30.707,16.404,39.715,72.543,37.239
