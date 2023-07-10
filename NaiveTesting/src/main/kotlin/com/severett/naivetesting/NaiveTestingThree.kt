@@ -1,17 +1,14 @@
 package com.severett.naivetesting
 
 import com.severett.common.model.Foo
-import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
-import kotlin.time.ExperimentalTime
 import kotlin.time.TimeSource
 import kotlin.time.measureTime
 
 private const val MICRO_DIVISOR = 1_000
 private const val ITERATIONS = 10_000
 
-@OptIn(ExperimentalTime::class)
 fun main() {
     val foo = Foo("FUZZ", listOf("BIZZ", "BUZZ"), 20u)
     // Warmup
